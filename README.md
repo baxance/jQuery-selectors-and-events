@@ -1,6 +1,5 @@
 # jQuery-selectors-and-events
 
-
 Number and name of feature: Feature #1: Display images
 
 Driver: Barrett Nance
@@ -16,20 +15,26 @@ Actual time needed to complete: 61 minutes
 
 Number and name of feature: Feature #2: Filter images
 
+Driver: James
+Navigator: Barrett
+
 Estimate of time needed to complete: 90 minutes
 
 Start time: 3:24
 
-Finish time: _____
+Finish time: 5:06
 
-Actual time needed to complete: _____
+Actual time needed to complete: 102 minutes
 
 Number and name of feature: Feature #3: Style the application
 
-Estimate of time needed to complete: _____
+Driver: Barrett
+Navigator: James
 
-Start time: _____
+Estimate of time needed to complete: 30 minutes
 
-Finish time: _____
+Start time: 6:00
 
-Actual time needed to complete: _____
+Finish time: 6:41
+
+Actual time needed to complete: 41 minutes
