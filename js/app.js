@@ -11,18 +11,15 @@ function HornPic(description, horns, image_url, keyword, title) {
 }
 
 HornPic.allHornPics = [];
+HornPic.allHornPics2 = [];
 
-HornPic.prototype.renderHorn = function() {
-  const $templateCopy = $('#photo-template').clone();
-  $templateCopy.removeAttr('id');
-  $templateCopy.attr('class', `hornedAnimal ${this.keyword}`)
-  $templateCopy.find('h2').text(this.title);
-  $templateCopy.find('img').attr('src', this.image_url);
-  $templateCopy.find('p').text(this.description);
-  console.log($templateCopy.html());
-  $('ul').append($templateCopy);
+HornPic.prototype.renderHornMustache = function() {
+  const htmlTemplate = $('#mustache-template').html();
+
+  const outputFromMustache = Mustache.render(htmlTemplate, this);
+
+  $('body > main').append(outputFromMustache);
 };
-
 
 
 function ImageData(images) {
@@ -32,8 +29,8 @@ function ImageData(images) {
     new HornPic(hornJsonObject.description, hornJsonObject.horns, hornJsonObject.image_url, hornJsonObject.keyword, hornJsonObject.title);
   });
 
-  HornPic.allHornPics.forEach(hornPic => hornPic.renderHorn());
-  HornPic.allHornPics.forEach(hornOption => hornOption.optionHorn())
+  HornPic.allHornPics.forEach(hornPic => hornPic.renderHornMustache());
+  HornPic.allHornPics.forEach(hornOption => hornOption.optionHorn());
 }
 
 
@@ -43,8 +40,8 @@ HornPic.prototype.optionHorn = function() {
   $optionCopy.attr('value', this.keyword);
   $optionCopy.text(this.keyword);
   $('select').append($optionCopy);
-  console.log($optionCopy)
-}
+  console.log($optionCopy);
+};
 
 $('#selector').on('change', handleClickingOnKeyword);
 
