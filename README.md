@@ -79,3 +79,16 @@ Start time: 4:50
 Finish time: 5:25
 
 Actual time needed to complete: ~35 minutes
+
+Number and name of feature: Feature #4: Sort the images
+
+Driver: Barrett Nance
+Navigator: James Shreckengost
+
+Estimate of time needed to complete: 60 minutes
+
+Start time: 5:30
+
+Finish time: 6:35
+
+Actual time needed to complete: 65 minutes
